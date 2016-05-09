@@ -12,10 +12,6 @@ class Tenant(models.Model):
     name = models.CharField(max_length=20)
     account = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
-    tenantid = models.CharField(max_length=14, unique=True, default='00000000000000')
-    capacity = models.IntegerField(default=0)
-    registertime = models.DateField(default=datetime.date.today)
-    lifetime = models.IntegerField(default=0)
 
 @csrf_exempt
 def getReg(request):
